@@ -2,12 +2,6 @@
   "name": "use-element-visibility",
   "version": "0.1.1",
   "description": "Custom React Hook for Intersection Observer Web API",
-  "main": "dist/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "NODE_ENV=production parcel build index.js",
-    "release": "npm run build && npm publish"
-  },
   "keywords": [
     "React Hooks",
     "Intersection Observer"
@@ -17,7 +11,12 @@
     "email": "yongdamsh@gmail.com",
     "url": "https://yongdam.com"
   },
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/yongdamsh/use-element-visibility.git"
+  },
   "license": "MIT",
+  "main": "dist/index.js",
   "dependencies": {
     "intersection-observer": "^0.5.1",
     "react": "^16.8.3",
@@ -27,5 +26,10 @@
     "@babel/core": "^7.3.4",
     "@babel/preset-env": "^7.3.4",
     "parcel-bundler": "^1.11.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "NODE_ENV=production parcel build index.js",
+    "release": "npm run build && npm publish"
   }
 }

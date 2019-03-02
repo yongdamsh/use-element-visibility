@@ -2,7 +2,7 @@ import 'intersection-observer';
 import { useState, useEffect, useRef } from 'react';
 
 function useElementVisibility(targetRefs, options) {
-  const initialIntersections = new Array(targetRefs.length).fill(0);
+  const initialIntersections = new Array(targetRefs.length).fill({ intersectionRatio: 0, isIntersecting: false });
   const [intersections, setIntersections] = useState(initialIntersections);
 
   function handleIntersectionChange(entries) {
