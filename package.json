@@ -22,16 +22,20 @@
     "react-dom": "^16.8.0"
   },
   "dependencies": {
-    "intersection-observer": "^0.5.1"
+    "intersection-observer": "^0.5.1",
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3"
   },
   "devDependencies": {
     "@babel/core": "^7.3.4",
     "@babel/preset-env": "^7.3.4",
+    "@babel/preset-react": "^7.0.0",
     "parcel-bundler": "^1.11.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "NODE_ENV=production parcel build index.js --target node",
-    "release": "npm run build && npm publish"
+    "release": "npm run build && npm publish",
+    "example:infinite-scroll": "parcel examples/infinite-scroll/index.html"
   }
 }

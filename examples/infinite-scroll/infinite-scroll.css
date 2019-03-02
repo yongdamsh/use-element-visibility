@@ -1,0 +1,16 @@
+.list {
+  list-style: none;
+  width: 300px;
+  margin: 0 auto;
+  padding-left: 0;
+}
+
+.item {
+  width: 100%;
+  height: 100px;
+  margin-bottom: 10px;
+  border: 1px solid #333;
+  font-size: 20px;
+  text-align: center;
+  line-height: 100px;
+}
