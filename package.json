@@ -1,6 +1,6 @@
 {
   "name": "use-element-visibility",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Custom React Hook for Intersection Observer Web API",
   "keywords": [
     "React Hooks",
@@ -12,8 +12,8 @@
     "url": "https://yongdam.com"
   },
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/yongdamsh/use-element-visibility.git"
+    "type": "git",
+    "url": "https://github.com/yongdamsh/use-element-visibility.git"
   },
   "license": "MIT",
   "main": "dist/index.js",
