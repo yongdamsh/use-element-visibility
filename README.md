@@ -67,11 +67,11 @@ function ScrollView() {
 
 ### Step.3 Use the visibility information returned
 
-The `useElementVisibility` hook returns visibility information for each element in the same order as the` targets` array.
+The `useElementVisibility` hook returns visibility information for each element in the same order as the `targets` array.
 
 > The visibility type is the same as [IntersectionObserverEntry](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserverEntry).
 
-Now, for implementation purposes, we implement dynamic UIs using fields like `intersectionRatio` and` isIntersecting`.
+Now, for implementation purposes, we implement dynamic UIs using fields like `intersectionRatio` and `isIntersecting`.
 
 
 ```jsx
