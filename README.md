@@ -18,8 +18,8 @@ npm install --save use-element-visibility
 ### Step.1 Initialize with Targets and Options
 
 Execute the hook by passing two arguments like the source code below.
-1. List of elements ([React refs] (https://reactjs.org/docs/hooks-reference.html#useref)) that want to detect changes in exposed areas
-2. [IntersectionObserver options] (https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API#Intersection_observer_options)
+1. List of elements ([React refs](https://reactjs.org/docs/hooks-reference.html#useref)) that want to detect changes in exposed areas
+2. [IntersectionObserver options](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API#Intersection_observer_options)
 
 ```jsx
 import useElementVisibility from 'use-element-visibility'
@@ -69,7 +69,7 @@ function ScrollView() {
 
 The `useElementVisibility` hook returns visibility information for each element in the same order as the` targets` array.
 
-> The visibility type is the same as [IntersectionObserverEntry] (https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserverEntry).
+> The visibility type is the same as [IntersectionObserverEntry](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserverEntry).
 
 Now, for implementation purposes, we implement dynamic UIs using fields like `intersectionRatio` and` isIntersecting`.
 
