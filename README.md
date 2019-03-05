@@ -36,7 +36,7 @@ function ScrollView() {
   const options = {
     root: null,
     rootMargin: '0px',
-    threshold: 1.0 // 배열도 가능 [0, 0.5, 1.0]
+    threshold: 1.0 // Also can be an array like [0, 0.5, 1.0]
   }
 
   const [topVisibility, middleVisibility, bottomVisibility] = useElementVisibility(targets, options)

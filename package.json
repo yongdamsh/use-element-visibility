@@ -1,6 +1,6 @@
 {
   "name": "use-element-visibility",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Custom React Hook for Intersection Observer Web API",
   "keywords": [
     "React Hooks",
