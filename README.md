@@ -47,7 +47,7 @@ function ScrollView() {
 }
 ```
 
-### Step.2 ref를 HTML에 binding
+### Step.2 Binding ref to HTML
 
 Connect the ref list created in Step.1 to the `ref` attribute of the rendered tag.
 
