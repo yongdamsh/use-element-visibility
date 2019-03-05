@@ -3,23 +3,23 @@ Intersection Observer API + React Hooks
 
 [![NPM](https://img.shields.io/npm/v/use-element-visibility.svg)](https://www.npmjs.com/package/use-element-visibility)
 
-[한국어 버전 (Korean Version)](README.ko.md)
+[English Version](README.md)
 
 ## Installation
 
-To install the latest version:
+최신 버전을 설치합니다.
+
 ```sh
 npm install --save use-element-visibility
 ```
 
-
 ## Usage
 
-### Step.1 Initialize with Targets and Options
+### Step.1 감지 대상과 옵션값 전달 
 
-Execute the hook by passing two arguments like the source code below.
-1. List of elements ([React refs] (https://reactjs.org/docs/hooks-reference.html#useref)) that want to detect changes in exposed areas
-2. [IntersectionObserver options] (https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API#Intersection_observer_options)
+아래 소스코드와 같이 2가지 인자를 전달해 hook을 실행합니다.
+1. 노출되는 영역을 변화를 감지하고자 하는 element([React refs](https://reactjs.org/docs/hooks-reference.html#useref))의 목록
+2. [IntersectionObserver options](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API#Intersection_observer_options)
 
 ```jsx
 import useElementVisibility from 'use-element-visibility'
@@ -29,10 +29,10 @@ function ScrollView() {
   const middleObserver = React.useRef();
   const bottomObserver = React.useRef();
 
-  // 1. List of elements(refs) to observe the intersection changes
+  // 1. 노출되는 영역을 변화를 감지하고자 하는 element(ref)의 목록
   const targets = [topObserver, middleObserver, bottomObserver]
 
-  // 2. IntersectionObserver Options
+  // 2. IntersectionObserver 옵션
   const options = {
     root: null,
     rootMargin: '0px',
@@ -42,14 +42,14 @@ function ScrollView() {
   const [topVisibility, middleVisibility, bottomVisibility] = useElementVisibility(targets, options)
 
   return (
-    // Refer to Step.2
+    // Step.2 참고
   )
 }
 ```
 
 ### Step.2 ref를 HTML에 binding
 
-Connect the ref list created in Step.1 to the `ref` attribute of the rendered tag.
+Step.1에서 생성한 ref 목록을 렌더링되는 태그의 `ref` 속성으로 연결합니다.
 
 ```jsx
 const targets = [topObserver, middleObserver, bottomObserver]
@@ -65,14 +65,13 @@ function ScrollView() {
 }
 ```
 
-### Step.3 Use the visibility information returned
+### Step.3 반환되는 visibility 정보 활용
 
-The `useElementVisibility` hook returns visibility information for each element in the same order as the` targets` array.
+`useElementVisibility` hook은 `targets` 배열과 동일한 순서로 각 element의 visibility 정보를 반환합니다. 
 
-> The visibility type is the same as [IntersectionObserverEntry] (https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserverEntry).
+> visibility 타입은 [IntersectionObserverEntry](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserverEntry)와 동일합니다.
 
-Now, for implementation purposes, we implement dynamic UIs using fields like `intersectionRatio` and` isIntersecting`.
-
+이제 구현 목적에 따라 `intersectionRatio`, `isIntersecting`과 같은 필드를 활용해 동적인 UI를 구현합니다.
 
 ```jsx
 function ScrollView() {
@@ -95,24 +94,24 @@ function ScrollView() {
 
 ### [Infinite Scroll](/examples/infinite-scroll)
 
-To run the demo page:
+아래 명령어로 페이지를 확인합니다.
 ```sh
 npm run example:infinite-scroll
 ```
 
 ### Lazy Image Loading
 
-WIP
+추가 예정
 
 ### Navigation Tab Bar
 
-WIP
+추가 예정
 
 
 ## Browser Compatibility
 
-WIP
+작성 중...
 
 ## useElementVisibility API Reference
 
-WIP
+작성 중...

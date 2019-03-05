@@ -2,14 +2,11 @@
   "name": "use-element-visibility",
   "version": "0.1.7",
   "description": "Custom React Hook for Intersection Observer Web API",
-  "keywords": [
-    "React Hooks",
-    "Intersection Observer"
-  ],
+  "keywords": ["React Hooks", "Intersection Observer"],
   "author": {
     "name": "Sanghyeon Lee",
     "email": "yongdamsh@gmail.com",
-    "url": "https://yongdam.com"
+    "url": "https://www.sanghyeonlee.dev"
   },
   "repository": {
     "type": "git",
