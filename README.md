@@ -25,9 +25,9 @@ Execute the hook by passing two arguments like the source code below.
 import useElementVisibility from 'use-element-visibility'
 
 function ScrollView() {
-  const topObserver = React.useRef();
-  const middleObserver = React.useRef();
-  const bottomObserver = React.useRef();
+  const topObserver = React.useRef()
+  const middleObserver = React.useRef()
+  const bottomObserver = React.useRef()
 
   // 1. List of elements(refs) to observe the intersection changes
   const targets = [topObserver, middleObserver, bottomObserver]
@@ -52,9 +52,13 @@ function ScrollView() {
 Connect the ref list created in Step.1 to the `ref` attribute of the rendered tag.
 
 ```jsx
-const targets = [topObserver, middleObserver, bottomObserver]
-
 function ScrollView() {
+  const topObserver = React.useRef()
+  const middleObserver = React.useRef()
+  const bottomObserver = React.useRef()
+
+  // Please refer to Step.1 for this part.
+
   return (
     <main>
       <section ref={topObserver}>Top</section>

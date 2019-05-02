@@ -55,6 +55,12 @@ Step.1에서 생성한 ref 목록을 렌더링되는 태그의 `ref` 속성으�
 const targets = [topObserver, middleObserver, bottomObserver]
 
 function ScrollView() {
+  const topObserver = React.useRef()
+  const middleObserver = React.useRef()
+  const bottomObserver = React.useRef()
+
+  // 이 부분은 Step.1을 참고해주세요.
+  
   return (
     <main>
       <section ref={topObserver}>Top</section>
