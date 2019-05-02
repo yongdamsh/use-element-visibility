@@ -40,6 +40,7 @@
     "build": "NODE_ENV=production parcel build index.js --target node",
     "release": "npm run build && npm publish",
     "lint": "eslint index.js examples/",
+    "example:lazy-image-loading": "parcel examples/lazy-image-loading/index.html",
     "example:infinite-scroll": "parcel examples/infinite-scroll/index.html"
   }
 }
