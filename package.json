@@ -1,6 +1,6 @@
 {
   "name": "use-element-visibility",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "Custom React Hook for Intersection Observer Web API",
   "keywords": [
     "React Hooks",
@@ -9,14 +9,14 @@
   "author": {
     "name": "Sanghyeon Lee",
     "email": "yongdamsh@gmail.com",
-    "url": "https://www.sanghyeonlee.dev"
+    "url": ""
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/yongdamsh/use-element-visibility.git"
   },
   "license": "MIT",
-  "main": "dist/index.js",
+  "main": "dist/useElementVisibility.js",
   "peerDependencies": {
     "react": "^16.8.0",
     "react-dom": "^16.8.0"
@@ -27,17 +27,19 @@
     "react-dom": "^16.8.3"
   },
   "devDependencies": {
-    "@babel/core": "^7.3.4",
-    "@babel/preset-env": "^7.3.4",
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
     "@babel/preset-react": "^7.0.0",
     "babel-eslint": "^10.0.1",
+    "babel-jest": "^24.7.1",
     "eslint": "^5.16.0",
     "eslint-plugin-react-hooks": "^1.6.0",
+    "jest": "^24.7.1",
     "parcel-bundler": "^1.11.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "NODE_ENV=production parcel build index.js --target node",
+    "test": "jest",
+    "build": "NODE_ENV=production parcel build src/useElementVisibility.js --target node",
     "release": "npm run build && npm publish",
     "lint": "eslint index.js examples/",
     "example:lazy-image-loading": "parcel examples/lazy-image-loading/index.html",

@@ -2,7 +2,10 @@ import 'intersection-observer';
 import { useState, useEffect, useRef } from 'react';
 
 function useElementVisibility(targetRefs, options) {
-  const initialIntersections = new Array(targetRefs.length).fill({ intersectionRatio: 0, isIntersecting: false });
+  const initialIntersections = targetRefs.map(() => ({
+    intersectionRatio: 0,
+    isIntersecting: false,
+  }));
   const [intersections, setIntersections] = useState(initialIntersections);
 
   function handleIntersectionChange(entries) {
@@ -15,7 +18,7 @@ function useElementVisibility(targetRefs, options) {
         target.isEqualNode(targetRef.current)
       );
       const hasMatchingTarget = index !== -1;
-      const isDifferentIntersectionRatio = hasMatchingTarget && nextIntersections[index].intersectionRatio !== intersectionRatio;
+      const isDifferentIntersectionRatio = hasMatchingTarget && parseInt(nextIntersections[index].intersectionRatio, 10) !== parseInt(intersectionRatio, 10);
 
       if (isDifferentIntersectionRatio) {
         nextIntersections[index] = entry;
