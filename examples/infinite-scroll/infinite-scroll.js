@@ -15,15 +15,16 @@ function App() {
   const bottomObserver = useRef();
   const [visibility] = useElementVisibility([bottomObserver]);
   const [currentPage, setCurrentPage] = useState(1);
+  const prevIntersectionRatioRef = useRef(visibility);
+  const currentIntersectionRatio = visibility.intersectionRatio;
+  const isBottomObserverVisible = prevIntersectionRatioRef.current !== 1 && currentIntersectionRatio === 1;
   const items = buildItems(currentPage);
 
   useEffect(() => {
-    const isBottomObserVisible = visibility.intersectionRatio === 1;
-
-    if (isBottomObserVisible) {
+    if (isBottomObserverVisible) {
       setCurrentPage(currentPage + 1);
     }
-  }, [visibility.intersectionRatio]);
+  }, [isBottomObserverVisible]);
 
   return (
     <>
