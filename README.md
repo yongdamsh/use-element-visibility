@@ -3,7 +3,10 @@ Intersection Observer API + React Hooks
 
 [![NPM](https://img.shields.io/npm/v/use-element-visibility.svg)](https://www.npmjs.com/package/use-element-visibility)
 
-[한국어 버전 (Korean Version)](README.ko.md)
+# NOTES
+- This project is still in the implementation phase and breaking changes will occur.
+- The latest version (v0.2.1) has a critical bug and is deprecated.
+
 
 ## Installation
 
@@ -97,12 +100,8 @@ function ScrollView() {
 
 ## Examples
 
-### [Infinite Scroll](/examples/infinite-scroll)
-
-To run the demo page:
-```sh
-npm run example:infinite-scroll
-```
+### Infinite Scroll
+WIP
 
 ### Lazy Image Loading
 
