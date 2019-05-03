@@ -5,7 +5,7 @@ Intersection Observer API + React Hooks
 
 # NOTES
 - This project is still in the implementation phase and breaking changes will occur.
-- The latest version has a critical bug and is deprecated.
+- The latest version (v0.2.1) has a critical bug and is deprecated.
 
 
 ## Installation
